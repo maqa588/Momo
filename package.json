@@ -50,9 +50,7 @@
     "@iconify-json/simple-icons": "^1.2.86",
     "@iconify-json/vscode-icons": "^1.2.57"
   },
-  "pnpm": {
-    "overrides": {
-      "fast-xml-parser": "5.8.0"
-    }
+  "overrides": {
+    "fast-xml-parser": "5.8.0"
   }
 }

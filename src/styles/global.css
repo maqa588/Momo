@@ -13,8 +13,9 @@
 
   body {
     @apply bg-[--bg-color] text-[--text-color];
-    font-family: "Songti SC", STSong, SimSun, NSimSun, "Noto Serif CJK SC",
-      "Source Han Serif SC", "Source Han Serif CN", serif;
+    font-family: "Songti SC", "Songti SC Regular", "STSongti-SC-Regular",
+      STSong, "华文宋体", SimSun, NSimSun, "Noto Serif CJK SC",
+      "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN", serif;
     overflow-y: scroll;
   }
   

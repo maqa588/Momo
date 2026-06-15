@@ -6,19 +6,22 @@ const translation: Translation = {
         archive: "Archive",
         about: "About",
         friends: "Friends",
+        strophe: "Strophe",
     },
     cover: {
         title: {
-            home: "Welcome to Momo's Blog",
+            home: "Welcome to Maqa's Blog",
             archive: "Archive",
             about: "About",
             friends: "Friends",
+            strophe: "Strophe",
         },
         subTitle: {
-            home: "Life is colorful!",
+            home: "Let justice and empathy prevail; let cold logic warm the world.",
             archive: "Total of {count} articles",
             about: "A minimalist blog template",
             friends: "Interesting Souls",
+            strophe: "A high-performance, professional-grade subtitle authoring tool built natively for Apple platforms.",
         }
     },
     toc: "Contents",

@@ -85,3 +85,13 @@ export async function getSpec(
     if(!collection) collection = await getEntry('spec', `${spec}/${defaultLanguage}`);
     return collection;
 }
+
+export async function getStrophe(
+    lang: string,
+    spec: string
+) {
+    const defaultLanguage = i18n?.defaultLocale ?? 'zh-cn';
+    let collection = await getEntry('strophe', `${spec}/${lang}`)
+    if(!collection) collection = await getEntry('strophe', `${spec}/${defaultLanguage}`);
+    return collection;
+}

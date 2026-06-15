@@ -4,6 +4,7 @@ export interface Translation {
         archive: string;
         about: string;
         friends: string;
+        strophe: string;
     };
     cover: {
         title: {
@@ -11,15 +12,17 @@ export interface Translation {
             archive: string;
             about: string;
             friends: string;
+            strophe: string;
         };
         subTitle: {
             home: string;
             archive: string;
             about: string;
             friends: string;
+            strophe: string;
         };
     };
-    toc:string;
+    toc: string;
     category: string;
     pageNavigation: {
         previous: string;

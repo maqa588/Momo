@@ -19,10 +19,10 @@ interface Props {
     image: string;
     pubDate: Date;
     url: string;
-    fallback: boolean;
+    fallback?: boolean;
 }
 
-const { entry, title, description, image, pubDate, url, fallback } = Astro.props;
+const { entry, title, description, image, pubDate, url, fallback = false } = Astro.props;
 
 const currentLang = Astro.currentLocale || i18n!.defaultLocale;
 const t = i18nit(currentLang);

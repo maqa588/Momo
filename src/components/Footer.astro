@@ -1,6 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
 import { profileConfig } from "../config";
+import policeBadge from "../assets/police_badge.webp";
+import { i18n } from "astro:config/client";
+
+const currentLang = Astro.currentLocale || i18n!.defaultLocale;
+const isZh = currentLang === "zh-cn";
 
 let introPage : string;
 
@@ -13,8 +18,19 @@ if (profileConfig.indexPage) {
 
 <!-- footer -->
 <footer class="flex flex-col md:flex-row md:justify-between items-start md:items-center py-10 text-[var(--text-color-70)] max-w-[var(--header-width)] mx-auto w-full">
-    <div class="mb-1 md:mb-0">
-        © {profileConfig.startYear} - {new Date().getFullYear()} <a class="link-line" target="_self" href={introPage}>{profileConfig.name}</a>. 
+    <div class="mb-1 md:mb-0 flex flex-col gap-1.5">
+        <div>
+            © {profileConfig.startYear} - {new Date().getFullYear()} <a class="link-line" target="_self" href={introPage}>{profileConfig.name}</a>. 
+        </div>
+        {isZh && (
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
+            <a href="https://beian.miit.gov.cn/" target="_blank" class="link-line">辽ICP备2024034629号-2</a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21100202000254" target="_blank" class="link-line flex items-center gap-1">
+                <img src={policeBadge.src} alt="公安徽章" class="w-4 h-4 inline-block" />
+                <span>辽公网安备21100202000254号</span>
+            </a>
+        </div>
+        )}
     </div>
     <div class="right">
         <p>Powered by 

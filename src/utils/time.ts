@@ -4,6 +4,9 @@
 const ensureDate = (input: string | Date): Date => {
   if (input instanceof Date) return input;
   
+  const parsed = new Date(input);
+  if (!isNaN(parsed.getTime())) return parsed;
+  
   // 如果是字符串 YYYY-MM-DD
   const [year, month, day] = input.split('-').map(Number);
   return new Date(year, month - 1, day);

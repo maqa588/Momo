@@ -19,10 +19,17 @@ const blogCollection = defineCollection({
 const specCollection = defineCollection({
     loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/spec" }),
 })
+
+const stropheCollection = defineCollection({
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/strophe" }),
+})
+
 export const collections: {
     blog: typeof blogCollection;
     spec: typeof specCollection;
+    strophe: typeof stropheCollection;
 } = {
     blog: blogCollection,
     spec: specCollection,
+    strophe: stropheCollection,
 }

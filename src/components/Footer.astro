@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 import { profileConfig } from "../config";
 import policeBadge from "../assets/police_badge.webp";
 import { i18n } from "astro:config/client";
@@ -26,7 +27,7 @@ if (profileConfig.indexPage) {
         <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
             <a href="https://beian.miit.gov.cn/" target="_blank" class="link-line">辽ICP备2024034629号-2</a>
             <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21100202000254" target="_blank" class="link-line flex items-center gap-1">
-                <img src={policeBadge.src} alt="公安徽章" class="w-4 h-4 inline-block" />
+                <Image src={policeBadge} alt="公安徽章" width={32} height={32} class="w-4 h-4 inline-block" />
                 <span>辽公网安备21100202000254号</span>
             </a>
         </div>

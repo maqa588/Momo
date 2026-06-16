@@ -93,7 +93,7 @@ const { remarkPluginFrontmatter } = await render(entry);
         </div>
         {image && (
             <div class="cover overflow-hidden">
-                <ImageModule src={image} class="w-full h-full object-cover"/>
+                <ImageModule src={image} width={850} class="w-full h-full object-cover"/>
             </div>
         )}
         {entry.data.draft && (
